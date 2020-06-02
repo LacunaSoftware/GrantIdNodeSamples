@@ -1,4 +1,4 @@
-# Nodejs Sample Api
+# Nodejs Web Api Sample 
 
     This sample expects Nodejs version >= 12.0
 
@@ -20,13 +20,13 @@
 
     node server.js
 
-Application will be running on [localhost:8092](localhost:8092)
+Application will be running on http://localhost:8092
 
 # Using the endpoints
 
 This sample offers three endpoints `/home` which requires **no authentication**, `/secret` and `/claims` both requiring a bearer token
 issued by https://lacuna-dev.grantid.com.
 
-**tip:** you can easily obtain a valid token for this api by running [this]() webapp.
+**tip:** you can easily obtain a valid token for this api by running [this](https://github.com/LacunaSoftware/GrantIdNodeSamples/tree/master/nodejs-webapp-code-sample) webapp.
 
 

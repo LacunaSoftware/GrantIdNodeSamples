@@ -24,7 +24,7 @@
 
     node server.js
 
-Application will be running on [localhost:8091](localhost:8091)
+Application will be running on http://localhost:8091
 
 # Using the WebApp
 
