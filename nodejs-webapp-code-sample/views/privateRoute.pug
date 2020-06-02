@@ -1,0 +1,21 @@
+extends layout
+
+block layout-content
+  div.container.text-center
+    h1.display-4 This is a secured page.
+
+    each val, key in claims
+      h4
+        dt #{key}
+      h6
+        dd #{val}
+
+    h4
+      dt Identity token
+    h6
+      dd #{id_token}
+
+    h4
+      dt Access Token 
+    h6
+      dd #{access_token}
