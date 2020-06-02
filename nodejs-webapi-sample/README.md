@@ -4,15 +4,15 @@
 
 # Installing Dependencies
 
-- [express](https://www.npmjs.com/package/express)
+[express](https://www.npmjs.com/package/express)
 
     npm install express
 
-- [openid-client](https://www.npmjs.com/package/openid-client)
+[openid-client](https://www.npmjs.com/package/openid-client)
 
     npm install openid-client
 
-- [jose](https://www.npmjs.com/package/jose)
+[jose](https://www.npmjs.com/package/jose)
 
     npm install jose
 

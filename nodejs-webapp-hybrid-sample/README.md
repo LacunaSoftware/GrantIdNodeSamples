@@ -1,4 +1,4 @@
-# Nodejs Sample Code App
+# Nodejs Sample Hybrid App
 
     This sample expects Nodejs version >= 12.0
 
@@ -12,14 +12,14 @@
 
     npm install openid-client
 
-[openid-client-helper](https://www.npmjs.com/package/openid-client-helper)
-
-    npm install openid-client-helper
-
 [pug](https://www.npmjs.com/package/pug)
 
     npm install pug
 
+[jose](https://www.npmjs.com/package/jose)
+
+    npm install jose
+    
 # Running
 
     node server.js
