@@ -16,6 +16,17 @@
 
     npm install jose
 
+# Customizing GrantId's Credentials
+
+Replace the `openIdConfig` object inside the the `config.js` file with the following to use your own credentials:
+
+```javascript
+openIdConfig = {
+    issuer: 'https://<your_subscription>.grantid.com',
+    api_scope: '<your_api_scope>'
+}
+```
+
 # Running
 
     node server.js

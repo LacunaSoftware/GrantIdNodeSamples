@@ -20,6 +20,25 @@
 
     npm install jose
 
+# Customizing GrantId's Credentials in your application
+
+Replace the `openIdConfig` object inside the the `config.js` file with the following to use your own credentials:
+
+```javascript
+const openIdConfig = {
+    issuer:'https://<your_subscription>.grantid.com',
+    client_id: '<your_client_id>',
+    client_secret: '<your_client_secret>',
+    redirect_uri: 'http://localhost:8091/login',
+    post_logout_redirect_uri: 'http://localhost:8091/',
+    scope: 'openid profile <your_api_scope>',
+    response_type: '<your_desired_response_type>',
+    response_mode: 'form_post',
+};
+```
+
+**tip 1:** `redirect_uri` and `post_logout_redirect_uri` metadata can accept any uri that you want as long as it is registered on your grantId application.
+
 # Running
 
     node server.js

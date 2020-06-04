@@ -20,6 +20,37 @@
 
     npm install pug
 
+# Customizing GrantId's Credentials in your application
+
+Replace the `openIdClientHelperParams` object inside the the `auth.js` file to the following:
+
+```javascript
+const openIdClientHelperParams = {
+    issuerMetadata: {
+        issuer: 'https://<your_subscription>.grantid.com',
+    },
+    clientMetadata: {
+        client_id: '<your_client_id>',
+        client_secret: '<your_client_secret>',
+        token_endpoint_auth_method: 'client_secret_post',
+        redirect_uri: 'http://localhost:8091/login',
+        post_logout_redirect_uri: 'http://localhost:8091/'
+    },
+    resources: {
+        'https://localhost:8091/Home/PrivateRoute': {
+            scope: 'openid profile <your_api_scope>'
+        }
+    },
+    customize: ({custom, client}) => {
+        if (client) {
+            client[custom.clock_tolerance] = 0 // Your clock tolerance here.
+        }
+    }
+}
+```
+
+**tip 1:** `redirect_uri` and `post_logout_redirect_uri` metadata can accept any uri that you want as long as it is registered on your grantId application.
+
 # Running
 
     node server.js
