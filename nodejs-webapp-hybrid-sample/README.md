@@ -4,22 +4,38 @@
 
 # Installing Dependencies
 
-[express](https://www.npmjs.com/package/express)
+[express](https://www.npmjs.com/package/express) - Fast, unopinionated, minimalist web framework for node.
 
     npm install express
 
-[openid-client](https://www.npmjs.com/package/openid-client)
+[openid-client](https://www.npmjs.com/package/openid-client) - openid-client is a server side OpenID Relying Party (RP, Client) implementation for Node.js runtime, supports passport.
 
     npm install openid-client
 
-[pug](https://www.npmjs.com/package/pug)
+[jose](https://www.npmjs.com/package/jose) - "JSON Web Almost Everything" - JWA, JWS, JWE, JWT, JWK, JWKS for Node.js with minimal dependencies
+
+    npm install jose
+    
+[pug](https://www.npmjs.com/package/pug) - Pug is a high performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers.
 
     npm install pug
 
-[jose](https://www.npmjs.com/package/jose)
+# Files
 
-    npm install jose
-
+    node-webapp-hybrid-sample/
+        |_ public/                 - sample style.
+            |_ style.css
+        |_ views/                  - sample front end.
+            |_ index.pug
+            |_ layout.pug
+            |_ privacy.pug
+            |_ privateRoute.pug   
+        |_ app.js                  - app intilization.
+        |_ auth.js                 - openid-client wrapper/authentication methods.
+        |_ config.js               - constant values and configurations.
+        |_ resources.js            - sample controller with authentication.
+        |_ server.js -             - server main.
+        
 # Customizing GrantId's Credentials in your application
 
 Replace the `openIdConfig` object inside the the `config.js` file with the following to use your own credentials:
@@ -37,7 +53,7 @@ const openIdConfig = {
 };
 ```
 
-**tip 1:** `redirect_uri` and `post_logout_redirect_uri` metadata can accept any uri that you want as long as it is registered on your grantId application.
+**tip:** `redirect_uri` and `post_logout_redirect_uri` metadata can accept any uri that you want as long as it is registered on your grantId application.
 
 # Running
 

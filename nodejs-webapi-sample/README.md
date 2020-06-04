@@ -4,17 +4,26 @@
 
 # Installing Dependencies
 
-[express](https://www.npmjs.com/package/express)
+[express](https://www.npmjs.com/package/express) - Fast, unopinionated, minimalist web framework for node.
 
     npm install express
 
-[openid-client](https://www.npmjs.com/package/openid-client)
+[openid-client](https://www.npmjs.com/package/openid-client) - openid-client is a server side OpenID Relying Party (RP, Client) implementation for Node.js runtime, supports passport.
 
     npm install openid-client
 
-[jose](https://www.npmjs.com/package/jose)
+[jose](https://www.npmjs.com/package/jose) - "JSON Web Almost Everything" - JWA, JWS, JWE, JWT, JWK, JWKS for Node.js with minimal dependencies
 
     npm install jose
+
+# Files
+
+    node-webapp-hybrid-sample/
+        |_ app.js                  - app intilization.
+        |_ auth.js                 - jwt authentication methods.
+        |_ config.js               - constant values and configurations.
+        |_ resources.js            - sample controller with authentication.
+        |_ server.js -             - server main.
 
 # Customizing GrantId's Credentials
 

@@ -4,21 +4,36 @@
 
 # Installing Dependencies
 
-[express](https://www.npmjs.com/package/express)
+[express](https://www.npmjs.com/package/express) - Fast, unopinionated, minimalist web framework for node.
 
     npm install express
 
-[openid-client](https://www.npmjs.com/package/openid-client)
+[openid-client](https://www.npmjs.com/package/openid-client) - openid-client is a server side OpenID Relying Party (RP, Client) implementation for Node.js runtime, supports passport.
 
     npm install openid-client
 
-[openid-client-helper](https://www.npmjs.com/package/openid-client-helper)
+[openid-client-helper](https://www.npmjs.com/package/openid-client-helper) - An extension to openid-client for automated maintenance and transparent application of OAuth 2.0 access tokens.
 
     npm install openid-client-helper
 
-[pug](https://www.npmjs.com/package/pug)
+[pug](https://www.npmjs.com/package/pug) - Pug is a high performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers.
 
     npm install pug
+
+# Files
+
+    node-webapp-hybrid-sample/
+            |_ public/                 - sample style.
+                |_ style.css
+            |_ views/                  - sample front end.
+                |_ index.pug
+                |_ layout.pug
+                |_ privacy.pug
+                |_ privateRoute.pug   
+            |_ app.js                  - app intilization.
+            |_ auth.js                 - openid-client-helper lib initilization.
+            |_ resources.js            - sample controller with authentication.
+            |_ server.js -             - server main.
 
 # Customizing GrantId's Credentials in your application
 
@@ -49,7 +64,7 @@ const openIdClientHelperParams = {
 }
 ```
 
-**tip 1:** `redirect_uri` and `post_logout_redirect_uri` metadata can accept any uri that you want as long as it is registered on your grantId application.
+**tip:** `redirect_uri` and `post_logout_redirect_uri` metadata can accept any uri that you want as long as it is registered on your grantId application.
 
 # Running
 
