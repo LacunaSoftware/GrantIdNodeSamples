@@ -5,7 +5,7 @@ let _sessionKey = null;
 let _openIdClientLib = null;
 let _tokenSetKey = null;
 
-init = async function(openIdConfig, openIdClientLib, jose, sessionKey = 'session', tokenSetKey = 'tokenSet', clock_tolerance = 30) {
+init = async function(openIdConfig, openIdClientLib, jose, sessionKey = 'session', tokenSetKey = 'tokenSet', clock_tolerance = 50) {
     _openIdConfig = openIdConfig;
     _openIdClientLib = openIdClientLib;
     _jose = jose;

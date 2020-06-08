@@ -18,7 +18,7 @@ const openIdClientHelperParams = {
     },
     customize: ({custom, client}) => {
         if (client) {
-            client[custom.clock_tolerance] = 30
+            client[custom.clock_tolerance] = 50
         }
     }
 }

@@ -48,7 +48,7 @@ const openIdConfig = {
     redirect_uri: 'http://localhost:8091/login',
     post_logout_redirect_uri: 'http://localhost:8091/',
     scope: 'openid profile <your_api_scope>',
-    response_type: '<your_desired_response_type>',
+    response_type: 'code id_token',
     response_mode: 'form_post',
 };
 ```
